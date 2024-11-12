@@ -1,0 +1,758 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Boca Boca Menu UPRB</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .filterDiv{
+            display: none;
+        }
+
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Raleway", sans-serif
+        }
+        .show{
+            display: block;
+        }
+    </style>
+</head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar">
+        <br>
+        <div class="w3-container">
+            <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+                <i class="fa fa-remove"></i>
+            </a>
+            <img src="images/cafeteria.jpg" style="width:90%;" class="w3-round"><br><br>
+            <h2><b>Cafeteria UPRB</b></h2>
+            <p class="w3-text-grey">Universidad de Puerto Rico, Recinto de Bayamon</p>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#Menu" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>MENU</a>
+            <a href="#SobreNosotros" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>SOBRE NOSOTROS</a>
+            <a href="#Contactanos" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACTANOS</a>
+        </div>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+
+        <!-- Header -->
+        <header id="Menu">
+            <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+            <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+            <div class="w3-container">
+                <h1 style="text-align: center;"><b>Menu</b></h1>
+                <div class="w3-section w3-bottombar w3-padding-16">
+                    <span class="w3-margin-right">Filter:</span>
+                    <button class="w3-button w3-black" onclick="filterSelection('all')">ALL</button>
+                    <button class="w3-button w3-white" onclick="filterSelection('Desayuno')"><i class="fa fa-diamond w3-margin-right"></i>Desayuno</button>
+                    <button class="w3-button w3-white w3-hide-small" onclick="filterSelection('Almuerzo')"><i class="fa fa-photo w3-margin-right"></i>Almuerzo</button>
+                    <button class="w3-button w3-white w3-hide-small" onclick="filterSelection('bebida')"><i class="fa fa-map-pin w3-margin-right"></i>Bebidas</button>
+                    <button class="w3-button w3-white w3-hide-small" onclick="filterSelection('articulos')"><i class="fa fa-map-pin w3-margin-right"></i>Articulos</button>
+                </div>
+            </div></header>
+
+        <div class="w3-container">
+            <h1 style="text-align: center;"><b>Menu de Almuerzo</b></h1>
+            <h3><b>Platos Principales</b></h3>
+            <table class="w3-table w3-large w3-stripped w3-bordered">
+                <tr class="w3-black">
+                    <th>Plato</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td>Pollo al horno</td>
+                    <td>$7.95</td>
+                </tr>
+                <tr>
+                    <td>Chuleta</td>
+                    <td>$8.95</td>
+                </tr>
+                <tr>
+                    <td>Carne Frita</td>
+                    <td>$9.95</td>
+                </tr>
+                <tr>
+                    <td>Costillas</td>
+                    <td>$10.95</td>
+                </tr>
+
+            </table>
+            
+            <h3><b>Complementos</b></h3>
+            <p>Todo plato principal incluye 2 complementos y botella de agua.</p>
+        </div>
+
+    
+
+        <!-- First Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv bebida w3-third w3-container w3-margin-bottom">
+                <!--<img src="Articulos/Agua.jfif" alt="Botella de Agua" style="width:50%; height:200px;display: block; margin: auto;" class="w3-hover-opacity">-->
+                <div class="w3-container w3-white">
+                    <img src="images/Articulos/Agua.jfif" alt="Botella de Agua" style="width:100%;" class="w3-hover-opacity">
+                    <p><b>Botella de Agua 16.9oz</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv bebida w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/" alt="Jugos Suiza" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Jugo Suiza</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv bebida w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/HawaiianPunch.jpg" alt="Jugos Suiza" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Hawaiian Punch</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv bebida w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Cafe.JPG" alt="Cafe" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Cappuccion</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv bebida w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Arizona.avif" alt="Arizona" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Arizona</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv bebida w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Grandma.png" alt="Galletas Grandma" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Galletas Grandma</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Third Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Sunflower Seeds.jfif" alt="Sunflower seeds" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Sunflower Seeds</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/" alt="Crackerjacks" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Crakerjacks</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/" alt="Besitos de Coco" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Besitos de Coco</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Fourth Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/" alt="Bizcochitos Vitony" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Bizcochitos Vitony</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Flan.jpg" alt="Flanes" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Flanes</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/" alt="Cheesecakes" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Cheesecakes</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fifth Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Chicles.jpg" alt="Chicles" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Chicles</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white ">
+                    <img src="Articulos/" alt="Altoids" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Altoids</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/TicTac.jpg" alt="Tic Tacs " style="width:100%" class="w3-hover-opacity">
+                    <p><b>Tic Tacs </b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Sixth Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Corn Nuts.jfif" alt="Cornuts" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Corn Nuts</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Combos.jfif" alt="Combos" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Combos</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/" alt="Muffins" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Muffins</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seventh Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv bebida w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Powerade.webp" alt="Powerade" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Powerade</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv bebida w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Ciclon.jfif" alt="Ciclones" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Ciclones</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv bebida w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/monster.jpg" alt="Monster Energy " style="width:100%" class="w3-hover-opacity">
+                    <p><b>Monster Energy </b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Eighth Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv bebida w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/" alt="Reign Storm " style="width:100%" class="w3-hover-opacity">
+                    <p><b>Reign Storm </b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv bebida w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Coca Cola.avif" alt="Lata de Coca cola " style="width:100%" class="w3-hover-opacity">
+                    <p><b>Lata de Coca cola </b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv bebida w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Diet Coke.png" alt="Lata de Coca Cola de Dieta" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Lata de Coca Cola de Dieta</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ninth Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv bebida w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Sprite.webp" alt="Sprite" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Sprite</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv bebida w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/" alt="Coco Rico" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Coco Rico</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv bebida w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Fanta.jfif" alt="Fanta" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Fanta</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tenth Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/" alt="Dirty Potato Chips" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Dirty Potato Chips</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Dorito.png" alt="Doritos" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Doritos</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Fritos.jpg" alt="Fritos" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Fritos</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Eleventh Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Lays.jfif" alt="Lays" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Lays</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Funyons.jpg" alt="Funyons" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Funyons</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/NatuChips.png" alt="NatureChips" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Platanutres Natu Chips</b></p>
+                    <p>Otra version Natura Chips, Nature Chips</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Twelfth Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Fiesta Mix.jpg" alt="FiestaMix" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Fiesta Mix</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Isleño.jpg" alt="Isleño" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Isleño</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/" alt="" style="width:100%" class="w3-hover-opacity">
+                    <p><b></b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thirteenth Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv bebida w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Malta.webp" alt="Malta" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Malta</b></p>
+                    <p>1.00</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Hershey.jpg" alt="Hersheys" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Hersheys</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/M&M.jpg" alt="M&M " style="width:100%" class="w3-hover-opacity">
+                    <p><b>M&M</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fourteenth Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Sneakers.webp" alt="Sneakers" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Sneakers</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/3Musketeers.webp" alt="3 mosketeers" style="width:100%" class="w3-hover-opacity">
+                    <p><b>3 Musketeers</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Dove.webp" alt="Dove" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Dove</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fifteenth Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Crunch.webp" alt="Crunch" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Crunch</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Twix.jpg" alt="Twix" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Twix</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Ferrero.png" alt="Ferrero Rocher" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Ferrero Rocher</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sixteenth Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Duplo.jpg" alt="Duplo" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Duplo</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/kinder bueno.jpg" alt="Kinder Bueno" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Kinder Bueno</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Nutella to go.webp" alt="Nutella to GO" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Nutella to GO</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seventeenth Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Kit Kat.webp" alt="Kit Kat" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Kit Kat</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/kisses.png" alt="Kisses" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Kisses</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/hanuta.webp" alt="Hanuta" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Hanuta</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Eighteenth Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/" alt="Almond Joy" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Almond Joy</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/whooper.webp" alt="Whoopers" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Whoopers</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Resses.webp" alt="Reeses" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Reeses</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nineteenth Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Butterfinger.jfif" alt="Butterfinger" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Butterfinger</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Munch.jpg" alt="Munch" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Munch</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Chunky.jpg" alt="Chunky" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Chunky</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Twentieth Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/" alt="Yorks Peppermint" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Yorks Peppermint</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Skittles.jfif" alt="Skittles" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Skittles</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Starburst.webp" alt="Starburst" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Starburst</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Twenty-First Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/" alt="Charleston Chews" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Charleston Chews</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Jolly Ranger.jfif" alt="Jolly Ranchers" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Jolly Ranchers</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Sour Patch.webp" alt="Sour Patch" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Sour Patch</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Twenty-Second Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Nerds.png" alt="Nerds" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Nerds</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Sweet Arts.avif" alt="SweetArts" style="width:100%" class="w3-hover-opacity">
+                    <p><b>SweetArts</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Welch fruit snacks.jpg" alt="Welch’s fruit snacks" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Welch’s fruit snacks</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Twenty-Third Photo Grid-->
+        <div class="w3-row-padding">
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Airheads.jpg" alt="Airheads" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Airheads</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/" alt="Haribo" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Haribo</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+            <div class="filterDiv articulos w3-third w3-container w3-margin-bottom">
+                <div class="w3-container w3-white">
+                    <img src="Articulos/Confetti.webp" alt="Confetti" style="width:100%" class="w3-hover-opacity">
+                    <p><b>Confetti21</b></p>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Images of Me -->
+        <div class="w3-row-padding w3-padding-16" id="SobreNosotros">
+            <div class="w3-col m6">
+                <img src="images/cafeteria.jpg" alt="Edificio de la Cafeteria" style="width:100%">
+            </div>
+            <div class="w3-col m6">
+                <img src="images/interior.jfif" alt="Interior de la Cafeteria" style="width:100%">
+            </div>
+        </div>
+
+        <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+            <h4><b>Sobre Nosotros</b></h4>
+            <p>Ofrecemos la mejor comida criolla del área en un ambiente acogedor y hogareño. Somos también la cocina principal para otras 2 cafeterías dentro de la UPR. Ofrecemos un menú básico con 4 especiales diarios. Precios módicos para estudiantes. </p>
+        </div>
+
+
+        </div>
+        <!-- End page content -->
+
+
+        <script>
+            // Script to open and close sidebar
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
+            }
+
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("myOverlay").style.display = "none";
+            }
+            // Function to filter portfolio items by category
+
+            filterSelection("all")
+
+            function filterSelection(category) {
+                var items, i;
+                items = document.getElementsByClassName("filterDiv");
+                if (category == "all") category = "";
+                for (i = 0; i < items.length; i++) {
+                    w3RemoveClass(items[i], "show");
+                    if (items[i].className.indexOf(category) > -1) w3AddClass(items[i], "show");
+                }
+
+            }
+
+            function w3AddClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    if (arr1.indexOf(arr2[i]) == -1) {
+                        element.className += " " + arr2[i];
+                    }
+
+                }
+            }
+            function w3RemoveClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    while (arr1.indexOf(arr2[i]) > -1) {
+                        arr1.splice(arr1.indexOf(arr2[i], 1));
+                    }
+                }
+                element.className = arr1.join(" ");
+            }
+            // Highlight the active filter button
+            var btnContainer = document.getElementsByClassName("w3-section")[0];
+            var btns = btnContainer.getElementsByClassName("w3-button");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("w3-black");
+                    current[0].className = current[0].className.replace(" w3-black", "");
+                    this.className += " w3-black";
+                });
+            }
+        </script>
+</body>
+</html>
